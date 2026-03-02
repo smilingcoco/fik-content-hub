@@ -28,12 +28,12 @@ export default function App() {
     { id: 'section-02', number: '02', title: 'Qué nos falta' },
     { id: 'section-03', number: '03', title: 'Método' },
     { id: 'section-04', number: '04', title: 'Números' },
-    { id: 'section-05', number: '05', title: 'Cambio' },
-    { id: 'section-06', number: '06', title: 'Patrones' },
-    { id: 'section-07', number: '07', title: 'Arquetipos' },
+    { id: 'section-05', number: '05', title: 'Patrones' },
+    { id: 'section-06', number: '06', title: 'Arquetipos' },
+    { id: 'section-07', number: '07', title: '¿Y 2026?' },
     { id: 'section-08', number: '08', title: 'Signal Hunter' },
     { id: 'section-09', number: '09', title: 'Decisiones' },
-    { id: 'section-10', number: '10', title: 'No ganamos' }
+    { id: 'section-10', number: '10', title: 'Next Steps' }
   ];
 
   useEffect(() => {
@@ -119,12 +119,7 @@ export default function App() {
             </motion.div>
           </SectionWrapper>
 
-          <SectionWrapper id="section-05" number="05" title="Un cambio de posición">
-            <p>{data.evolution.intro}</p>
-            <EvolutionBox evolution={data.evolution} />
-          </SectionWrapper>
-
-          <SectionWrapper id="section-06" number="06" title="Los siete patrones">
+          <SectionWrapper id="section-05" number="05" title="Los siete patrones">
             {data.patternsIntro.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -133,7 +128,7 @@ export default function App() {
             ))}
           </SectionWrapper>
 
-          <SectionWrapper id="section-07" number="07" title="Los cuatro arquetipos de cliente">
+          <SectionWrapper id="section-06" number="06" title="Los cuatro arquetipos de cliente">
             <p>{data.archetypesIntro}</p>
             <ArchetypeGrid archetypes={data.archetypes} />
             <p className="partner-intro">
@@ -141,6 +136,11 @@ export default function App() {
               pipeline concreto ya en marcha.
             </p>
             <PartnerGrid partners={data.partners} />
+          </SectionWrapper>
+
+          <SectionWrapper id="section-07" number="07" title="Un cambio de posición">
+            <p>{data.evolution.intro}</p>
+            <EvolutionBox evolution={data.evolution} />
           </SectionWrapper>
 
           <SectionWrapper id="section-08" number="08" title="De documento a sistema activo">
