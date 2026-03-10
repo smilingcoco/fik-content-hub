@@ -1,5 +1,6 @@
 import HubHomePage from './pages/HubHomePage';
 import OriginsMapPage from './pages/OriginsMapPage';
+import BenchmarkCmssPage from './pages/BenchmarkCmssPage';
 
 function getRoute() {
   if (typeof window === 'undefined') {
@@ -15,6 +16,10 @@ export default function App() {
 
   if (route === '/origins-map') {
     return <OriginsMapPage />;
+  }
+
+  if (route === '/benchmark-cmss') {
+    return <BenchmarkCmssPage />;
   }
 
   return <HubHomePage />;

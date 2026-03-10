@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "label": "Tailor Hub · Content Intelligence",
+    "title": "Benchmark CMS's",
+    "subtitle": "Comparativa práctica para decidir stack de contenido en proyectos Tailor 2026",
+    "stats": [
+      { "label": "CMS evaluados", "value": "6" },
+      { "label": "Criterios", "value": "10" },
+      { "label": "Casos tipo", "value": "4" },
+      { "label": "Recomendaciones", "value": "5" },
+      { "label": "Versión", "value": "1.0 · Mar 2026" }
+    ]
+  },
+  "overview": [
+    "Este benchmark ordena los CMS que más sentido tienen para Tailor según contexto de negocio, nivel de complejidad y velocidad de ejecución.",
+    "No es una comparativa académica. Es una guía operativa para tomar decisiones de arquitectura con criterio compartido entre ventas, producto y delivery."
+  ],
+  "scope": [
+    "Stack evaluado: Contentful, Sanity, Strapi, Storyblok, WordPress Headless y Directus.",
+    "La puntuación combina criterios técnicos, operativos y de negocio para evitar decisiones sesgadas solo por preferencia del equipo."
+  ],
+  "criteria": [
+    { "name": "Time-to-market", "weight": "15%", "desc": "Velocidad de puesta en producción del primer entorno." },
+    { "name": "Editor Experience", "weight": "15%", "desc": "Facilidad de uso para equipos de marketing y contenido." },
+    { "name": "Modelado y escalabilidad", "weight": "15%", "desc": "Capacidad de evolucionar el modelo sin deuda." },
+    { "name": "Integraciones", "weight": "10%", "desc": "Conectividad con ecommerce, analytics, CRM y automation." },
+    { "name": "Governance y roles", "weight": "10%", "desc": "Permisos, workflows y trazabilidad editorial." },
+    { "name": "Performance", "weight": "10%", "desc": "Impacto en tiempos de respuesta y estrategia de caché." },
+    { "name": "Coste total", "weight": "10%", "desc": "Licencias + mantenimiento + esfuerzo de operación." },
+    { "name": "DX del equipo", "weight": "5%", "desc": "Curva de aprendizaje y productividad técnica." },
+    { "name": "Portabilidad", "weight": "5%", "desc": "Facilidad para migrar datos y evitar lock-in extremo." },
+    { "name": "Ecosistema", "weight": "5%", "desc": "Madurez de comunidad, documentación y partners." }
+  ],
+  "benchmark": [
+    { "cms": "Contentful", "fit": "Enterprise content platforms", "score": "8.8/10", "strength": "Governance + workflows", "risk": "Coste en escalado" },
+    { "cms": "Sanity", "fit": "Producto + contenido dinámico", "score": "8.6/10", "strength": "Flexibilidad de modelado", "risk": "Necesita equipo con criterio" },
+    { "cms": "Storyblok", "fit": "Marketing teams multi-país", "score": "8.2/10", "strength": "Editor visual", "risk": "Modelos complejos menos cómodos" },
+    { "cms": "Strapi", "fit": "Proyectos custom con control backend", "score": "7.9/10", "strength": "Control total self-hosted", "risk": "Mayor carga operativa" },
+    { "cms": "Directus", "fit": "Data-heavy use cases", "score": "7.6/10", "strength": "Capa de datos potente", "risk": "UX editorial menos friendly" },
+    { "cms": "WordPress Headless", "fit": "Equipos acostumbrados a WP", "score": "7.1/10", "strength": "Adopción rápida", "risk": "Deuda técnica si crece alcance" }
+  ],
+  "recommendations": [
+    {
+      "title": "Si el cliente prioriza gobierno editorial",
+      "body": "Contentful es la elección más sólida cuando compliance, permisos y trazabilidad pesan más que coste inicial."
+    },
+    {
+      "title": "Si el producto evoluciona rápido",
+      "body": "Sanity suele ganar por flexibilidad y velocidad para iterar el modelo sin romper la operación de contenido."
+    },
+    {
+      "title": "Si marketing necesita autonomía visual",
+      "body": "Storyblok acelera operación de campañas y reduce dependencia del equipo técnico en cambios recurrentes."
+    },
+    {
+      "title": "Si el cliente exige ownership total",
+      "body": "Strapi/Directus tienen sentido en escenarios con capacidad DevOps real y roadmap de mantenimiento claro."
+    },
+    {
+      "title": "Evitar decisiones por moda",
+      "body": "La pregunta correcta no es qué CMS está de moda, sino qué combinación minimiza fricción para ese negocio concreto."
+    }
+  ],
+  "nextSteps": [
+    "Convertir este benchmark en checklist de preventa para propuestas nuevas.",
+    "Crear one-pager de decisión por tipo de cliente (startup, scaleup, enterprise, multi-brand).",
+    "Revisar puntuaciones cada trimestre con feedback de proyectos en activo.",
+    "Documentar costes reales por proyecto para refinar scoring de TCO."
+  ]
+}

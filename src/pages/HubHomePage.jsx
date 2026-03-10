@@ -9,10 +9,11 @@ const contentItems = [
     status: 'Publicado'
   },
   {
-    title: 'Tailor Playbook',
-    description: 'Próximamente: manual operativo transversal para ventas, delivery y comunicación.',
-    href: null,
-    status: 'Próximamente'
+    title: "Benchmark CMS's",
+    description:
+      'Comparativa operativa de CMS para decidir stack por contexto de negocio, complejidad y velocidad de ejecución.',
+    href: '/benchmark-cmss',
+    status: 'Publicado'
   },
   {
     title: 'Signal Hunter Reports',
