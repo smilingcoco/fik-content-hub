@@ -1117,6 +1117,32 @@ a {
   font-size: 15px;
 }
 
+.benchmark-kicker {
+  margin-bottom: 18px;
+}
+
+.source-list {
+  list-style: none;
+  border-top: 1px solid var(--neutral-200);
+  margin-top: 18px;
+}
+
+.source-list li {
+  border-bottom: 1px solid var(--neutral-200);
+  padding: 14px 0;
+}
+
+.source-list a {
+  color: var(--neutral-900);
+  text-decoration: none;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.source-list a:hover {
+  color: var(--blue-500);
+  border-bottom-color: var(--blue-500);
+}
+
 .doc-footer {
   border-top: 1px solid var(--neutral-200);
   padding-top: 32px;

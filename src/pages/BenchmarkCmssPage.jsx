@@ -9,12 +9,18 @@ export default function BenchmarkCmssPage() {
 
   const navSections = [
     { id: 'section-01', number: '01', title: 'Objetivo' },
-    { id: 'section-02', number: '02', title: 'Alcance' },
-    { id: 'section-03', number: '03', title: 'Criterios' },
-    { id: 'section-04', number: '04', title: 'Benchmark' },
-    { id: 'section-05', number: '05', title: 'Recomendaciones' },
-    { id: 'section-06', number: '06', title: 'Next Steps' }
+    { id: 'section-02', number: '02', title: 'Monolítico vs headless' },
+    { id: 'section-03', number: '03', title: 'WordPress' },
+    { id: 'section-04', number: '04', title: 'Drupal' },
+    { id: 'section-05', number: '05', title: 'Sanity' },
+    { id: 'section-06', number: '06', title: 'Contentful' },
+    { id: 'section-07', number: '07', title: 'Resultado benchmark' },
+    { id: 'section-08', number: '08', title: 'FAQ' },
+    { id: 'section-09', number: '09', title: 'Quiénes somos' },
+    { id: 'section-10', number: '10', title: 'Fuentes' }
   ];
+
+  const [wordpress, drupal, sanity, contentful] = data.platforms;
 
   useEffect(() => {
     document.title = "Benchmark CMS's - Tailor Hub";
@@ -49,6 +55,15 @@ export default function BenchmarkCmssPage() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const renderPlatform = (platform) => (
+    <>
+      <p className="section-note benchmark-kicker">{platform.kicker}</p>
+      {platform.paragraphs.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
+    </>
+  );
+
   return (
     <main className="page-shell">
       <div className="reading-progress" aria-hidden="true">
@@ -59,7 +74,13 @@ export default function BenchmarkCmssPage() {
       </a>
 
       <div className="app-layout">
-        <HeroSection meta={data.meta} />
+        <HeroSection
+          meta={data.meta}
+          actions={{
+            primary: { href: '#section-01', label: 'Empezar lectura' },
+            secondary: { href: '#section-07', label: 'Ver benchmark' }
+          }}
+        />
 
         <aside className="side-nav" aria-label="Navegación por secciones">
           <div className="side-nav-brand" aria-hidden="true">
@@ -82,32 +103,34 @@ export default function BenchmarkCmssPage() {
 
         <div className="page-content">
           <SectionWrapper id="section-01" number="01" title="Objetivo del benchmark">
-            {data.overview.map((paragraph) => (
+            {data.objective.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </SectionWrapper>
 
-          <SectionWrapper id="section-02" number="02" title="Alcance del análisis">
-            {data.scope.map((paragraph) => (
+          <SectionWrapper id="section-02" number="02" title="El modelo que lo cambió todo">
+            {data.modelShift.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </SectionWrapper>
 
-          <SectionWrapper id="section-03" number="03" title="Criterios y pesos">
-            <div className="criteria-grid">
-              {data.criteria.map((criterion) => (
-                <article className="criteria-card" key={criterion.name}>
-                  <div className="criteria-top">
-                    <h3 className="criteria-name">{criterion.name}</h3>
-                    <span className="criteria-weight">{criterion.weight}</span>
-                  </div>
-                  <p className="criteria-desc">{criterion.desc}</p>
-                </article>
-              ))}
-            </div>
+          <SectionWrapper id="section-03" number="03" title={wordpress.name}>
+            {renderPlatform(wordpress)}
           </SectionWrapper>
 
-          <SectionWrapper id="section-04" number="04" title="Resultado benchmark">
+          <SectionWrapper id="section-04" number="04" title={drupal.name}>
+            {renderPlatform(drupal)}
+          </SectionWrapper>
+
+          <SectionWrapper id="section-05" number="05" title={sanity.name}>
+            {renderPlatform(sanity)}
+          </SectionWrapper>
+
+          <SectionWrapper id="section-06" number="06" title={contentful.name}>
+            {renderPlatform(contentful)}
+          </SectionWrapper>
+
+          <SectionWrapper id="section-07" number="07" title="Resultado benchmark">
             <div className="signal-table-wrap">
               <table className="signal-table">
                 <thead>
@@ -134,24 +157,34 @@ export default function BenchmarkCmssPage() {
             </div>
           </SectionWrapper>
 
-          <SectionWrapper id="section-05" number="05" title="Recomendaciones accionables">
+          <SectionWrapper id="section-08" number="08" title="Lo que nos preguntan siempre">
             <ul className="action-list">
-              {data.recommendations.map((rec, index) => (
-                <li key={rec.title}>
+              {data.faq.map((item, index) => (
+                <li key={item.question}>
                   <span className="action-num">{String(index + 1).padStart(2, '0')}</span>
                   <div className="action-text">
-                    <strong>{rec.title}</strong>
-                    {rec.body}
+                    <strong>{item.question}</strong>
+                    {item.answer}
                   </div>
                 </li>
               ))}
             </ul>
           </SectionWrapper>
 
-          <SectionWrapper id="section-06" number="06" title="Next steps">
-            <ul className="next-steps-list">
-              {data.nextSteps.map((step) => (
-                <li key={step}>{step}</li>
+          <SectionWrapper id="section-09" number="09" title="Quiénes somos y por qué escribimos esto">
+            {data.about.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </SectionWrapper>
+
+          <SectionWrapper id="section-10" number="10" title="Fuentes y referencias">
+            <ul className="source-list">
+              {data.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noreferrer">
+                    {source.title}
+                  </a>
+                </li>
               ))}
             </ul>
           </SectionWrapper>

@@ -9,9 +9,12 @@ const word = {
   })
 };
 
-export default function HeroSection({ meta }) {
+export default function HeroSection({ meta, actions }) {
   const [line1 = 'ORIGINS', ...rest] = meta.title.toUpperCase().split(' ');
   const line2 = rest.join(' ') || 'MAP';
+
+  const primaryAction = actions?.primary ?? { href: '#section-01', label: 'Empezar lectura' };
+  const secondaryAction = actions?.secondary ?? { href: '#section-06', label: 'Ir a patrones' };
 
   return (
     <header className="hero-section">
@@ -26,11 +29,11 @@ export default function HeroSection({ meta }) {
       </h1>
       <p className="hero-subtitle">{meta.subtitle}</p>
       <div className="hero-actions">
-        <a className="hero-action primary" href="#section-01">
-          Empezar lectura
+        <a className="hero-action primary" href={primaryAction.href}>
+          {primaryAction.label}
         </a>
-        <a className="hero-action" href="#section-06">
-          Ir a patrones
+        <a className="hero-action" href={secondaryAction.href}>
+          {secondaryAction.label}
         </a>
       </div>
       <div className="hero-meta-row">

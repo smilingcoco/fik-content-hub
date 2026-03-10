@@ -2,69 +2,158 @@
   "meta": {
     "label": "Tailor Hub · Content Intelligence",
     "title": "Benchmark CMS's",
-    "subtitle": "Comparativa práctica para decidir stack de contenido en proyectos Tailor 2026",
+    "subtitle": "De WordPress a Contentful: cómo elegir el CMS que no te va a frenar",
     "stats": [
-      { "label": "CMS evaluados", "value": "6" },
-      { "label": "Criterios", "value": "10" },
-      { "label": "Casos tipo", "value": "4" },
-      { "label": "Recomendaciones", "value": "5" },
-      { "label": "Versión", "value": "1.0 · Mar 2026" }
+      { "label": "CMS analizados", "value": "4" },
+      { "label": "Modelos comparados", "value": "2" },
+      { "label": "FAQs clave", "value": "6" },
+      { "label": "Fuentes", "value": "8" },
+      { "label": "Versión", "value": "1.1 · Mar 2026" }
     ]
   },
-  "overview": [
-    "Este benchmark ordena los CMS que más sentido tienen para Tailor según contexto de negocio, nivel de complejidad y velocidad de ejecución.",
-    "No es una comparativa académica. Es una guía operativa para tomar decisiones de arquitectura con criterio compartido entre ventas, producto y delivery."
+  "objective": [
+    "Hay más de 880 CMS en el mercado. La mayoría de los proyectos acaba usando uno de cuatro.",
+    "Este benchmark traduce esa realidad a una guía práctica para decidir con criterio, según el momento del negocio, la complejidad del contenido y la autonomía que necesita cada equipo.",
+    "No es una comparativa académica: es una herramienta de decisión para producto, marketing y tecnología."
   ],
-  "scope": [
-    "Stack evaluado: Contentful, Sanity, Strapi, Storyblok, WordPress Headless y Directus.",
-    "La puntuación combina criterios técnicos, operativos y de negocio para evitar decisiones sesgadas solo por preferencia del equipo."
+  "modelShift": [
+    "Antes de comparar plataformas concretas, hay una distinción que divide el mercado: CMS monolítico vs CMS headless.",
+    "En un CMS monolítico, el contenido y su presentación viven acoplados en el mismo sistema. Funciona bien para una web concreta, pero cada nuevo canal suele implicar tocar la base completa.",
+    "En un CMS headless, el contenido se gestiona por API y se publica una vez para distribuirse en múltiples frontends: web, app, landing, portal o cualquier canal nuevo.",
+    "La consecuencia operativa es directa: marketing gana autonomía para publicar, IT conserva control estructural, y escalar canales deja de requerir rehacerlo todo."
   ],
-  "criteria": [
-    { "name": "Time-to-market", "weight": "15%", "desc": "Velocidad de puesta en producción del primer entorno." },
-    { "name": "Editor Experience", "weight": "15%", "desc": "Facilidad de uso para equipos de marketing y contenido." },
-    { "name": "Modelado y escalabilidad", "weight": "15%", "desc": "Capacidad de evolucionar el modelo sin deuda." },
-    { "name": "Integraciones", "weight": "10%", "desc": "Conectividad con ecommerce, analytics, CRM y automation." },
-    { "name": "Governance y roles", "weight": "10%", "desc": "Permisos, workflows y trazabilidad editorial." },
-    { "name": "Performance", "weight": "10%", "desc": "Impacto en tiempos de respuesta y estrategia de caché." },
-    { "name": "Coste total", "weight": "10%", "desc": "Licencias + mantenimiento + esfuerzo de operación." },
-    { "name": "DX del equipo", "weight": "5%", "desc": "Curva de aprendizaje y productividad técnica." },
-    { "name": "Portabilidad", "weight": "5%", "desc": "Facilidad para migrar datos y evitar lock-in extremo." },
-    { "name": "Ecosistema", "weight": "5%", "desc": "Madurez de comunidad, documentación y partners." }
-  ],
-  "benchmark": [
-    { "cms": "Contentful", "fit": "Enterprise content platforms", "score": "8.8/10", "strength": "Governance + workflows", "risk": "Coste en escalado" },
-    { "cms": "Sanity", "fit": "Producto + contenido dinámico", "score": "8.6/10", "strength": "Flexibilidad de modelado", "risk": "Necesita equipo con criterio" },
-    { "cms": "Storyblok", "fit": "Marketing teams multi-país", "score": "8.2/10", "strength": "Editor visual", "risk": "Modelos complejos menos cómodos" },
-    { "cms": "Strapi", "fit": "Proyectos custom con control backend", "score": "7.9/10", "strength": "Control total self-hosted", "risk": "Mayor carga operativa" },
-    { "cms": "Directus", "fit": "Data-heavy use cases", "score": "7.6/10", "strength": "Capa de datos potente", "risk": "UX editorial menos friendly" },
-    { "cms": "WordPress Headless", "fit": "Equipos acostumbrados a WP", "score": "7.1/10", "strength": "Adopción rápida", "risk": "Deuda técnica si crece alcance" }
-  ],
-  "recommendations": [
+  "platforms": [
     {
-      "title": "Si el cliente prioriza gobierno editorial",
-      "body": "Contentful es la elección más sólida cuando compliance, permisos y trazabilidad pesan más que coste inicial."
+      "name": "WordPress",
+      "kicker": "Democratización + velocidad de arranque",
+      "paragraphs": [
+        "WordPress eliminó la barrera técnica para publicar en internet: plantillas, plugins y curva de entrada baja.",
+        "Sigue siendo una opción sólida para blogs, webs corporativas pequeñas y proyectos con alcance acotado.",
+        "El reto aparece al escalar: más idiomas, más canales, más dependencia de plugins y mayor riesgo de deuda técnica en mantenimiento."
+      ]
     },
     {
-      "title": "Si el producto evoluciona rápido",
-      "body": "Sanity suele ganar por flexibilidad y velocidad para iterar el modelo sin romper la operación de contenido."
+      "name": "Drupal",
+      "kicker": "Control alto + operación compleja",
+      "paragraphs": [
+        "Drupal encaja en organizaciones con flujos editoriales exigentes y equipos técnicos consolidados.",
+        "Puede sostener arquitecturas avanzadas, pero exige disciplina operativa continua y ciclos de mantenimiento intensivos.",
+        "Cuando se configura como headless, gana flexibilidad de entrega, pero mantiene una base no diseñada originalmente para ese modelo."
+      ]
     },
     {
-      "title": "Si marketing necesita autonomía visual",
-      "body": "Storyblok acelera operación de campañas y reduce dependencia del equipo técnico en cambios recurrentes."
+      "name": "Sanity",
+      "kicker": "Headless nativo + control técnico extremo",
+      "paragraphs": [
+        "Sanity aporta una experiencia excelente para equipos de desarrollo: modelo versionado con código, auditable y altamente flexible.",
+        "Es ideal cuando producto y contenido evolucionan rápido y el equipo técnico lidera esa evolución.",
+        "En entornos con fuerte autonomía editorial, algunos cambios de estructura siguen requiriendo soporte técnico, y eso afecta la operación diaria."
+      ]
     },
     {
-      "title": "Si el cliente exige ownership total",
-      "body": "Strapi/Directus tienen sentido en escenarios con capacidad DevOps real y roadmap de mantenimiento claro."
-    },
-    {
-      "title": "Evitar decisiones por moda",
-      "body": "La pregunta correcta no es qué CMS está de moda, sino qué combinación minimiza fricción para ese negocio concreto."
+      "name": "Contentful",
+      "kicker": "API-first + gobernanza enterprise",
+      "paragraphs": [
+        "Contentful nació headless desde origen y su fortaleza principal es operativa: gobernanza clara, permisos sólidos y escalado multi-equipo.",
+        "IT puede definir estructura y reglas; marketing puede operar con autonomía dentro de ese marco.",
+        "Su principal trade-off está en pricing y negociación enterprise, compensado por estabilidad contractual y previsibilidad en escenarios de escala."
+      ]
     }
   ],
-  "nextSteps": [
-    "Convertir este benchmark en checklist de preventa para propuestas nuevas.",
-    "Crear one-pager de decisión por tipo de cliente (startup, scaleup, enterprise, multi-brand).",
-    "Revisar puntuaciones cada trimestre con feedback de proyectos en activo.",
-    "Documentar costes reales por proyecto para refinar scoring de TCO."
+  "benchmark": [
+    {
+      "cms": "Contentful",
+      "fit": "Enterprise multi-equipo y multi-mercado",
+      "score": "8.9/10",
+      "strength": "Governance, SLA y operación editorial",
+      "risk": "Coste de licencia y negociación"
+    },
+    {
+      "cms": "Sanity",
+      "fit": "Producto digital con iteración rápida",
+      "score": "8.5/10",
+      "strength": "Flexibilidad de modelado y DX",
+      "risk": "Dependencia técnica en cambios editoriales"
+    },
+    {
+      "cms": "Drupal",
+      "fit": "Ecosistemas institucionales complejos",
+      "score": "7.4/10",
+      "strength": "Control estructural avanzado",
+      "risk": "Carga de mantenimiento elevada"
+    },
+    {
+      "cms": "WordPress",
+      "fit": "Web corporativa simple / blog",
+      "score": "7.1/10",
+      "strength": "Adopción rápida y bajo coste inicial",
+      "risk": "Escalabilidad y deuda por plugins"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué no WordPress?",
+      "answer": "Para proyectos simples, WordPress encaja. Cuando aparecen múltiples idiomas, múltiples canales y requisitos altos de disponibilidad, suele quedarse corto por diseño de base."
+    },
+    {
+      "question": "¿Por qué no Drupal si ya lo tenemos?",
+      "answer": "Drupal funciona, pero conviene medir cuánto presupuesto anual se dedica a mantener la plataforma frente a cuánto se invierte en crecimiento de producto."
+    },
+    {
+      "question": "¿Por qué Contentful y no Sanity o Storyblok?",
+      "answer": "Porque el foco aquí es gobernanza + autonomía editorial en organizaciones complejas. Si un caso concreto encaja mejor con otra plataforma, se recomienda sin problema."
+    },
+    {
+      "question": "¿Es caro Contentful?",
+      "answer": "La licencia puede parecer alta. En proyectos de escala, el coste total a 3 años suele mejorar cuando hay menos fricción operativa y más previsibilidad contractual."
+    },
+    {
+      "question": "¿Cuánto cuesta migrar?",
+      "answer": "Depende del punto de partida, pero también hay que medir el coste de no migrar: mantener durante años una arquitectura que frena velocidad y autonomía."
+    },
+    {
+      "question": "¿Tailor implementa este tipo de proyectos?",
+      "answer": "Sí. Tailor Hub implementa plataformas de contenido de esta escala y acompaña tanto en arquitectura como en operación y decisiones de largo plazo."
+    }
+  ],
+  "about": [
+    "En Tailor Hub llevamos años implementando proyectos de contenido a escala y esa experiencia nos ha dado criterio práctico sobre qué funciona en operación real.",
+    "Nos especializamos en Contentful por ajuste con proyectos enterprise: equipos editoriales amplios, gobernanza exigente y necesidad de escalar sin rehacer arquitectura.",
+    "Cuando otra plataforma es mejor para un caso concreto, se recomienda con transparencia y se conecta al cliente con el partner adecuado.",
+    "Si estás en fase de decisión sobre tu stack de contenido, escríbenos a hola@tailorhub.com para una conversación de trabajo sin ruido comercial."
+  ],
+  "sources": [
+    {
+      "title": "W3Techs · Usage statistics of content management systems",
+      "url": "https://w3techs.com/technologies/overview/content_management"
+    },
+    {
+      "title": "BuiltWith · CMS market share report",
+      "url": "https://builtwith.com/cms"
+    },
+    {
+      "title": "Storyblok · State of CMS",
+      "url": "https://www.storyblok.com/state-of-cms"
+    },
+    {
+      "title": "Vention · Software maintenance costs benchmark",
+      "url": "https://ventionteams.com/enterprise/software-maintenance-costs"
+    },
+    {
+      "title": "Contentful · Service Level Agreement",
+      "url": "https://www.contentful.com/legal/service-level-agreement"
+    },
+    {
+      "title": "Contentful · Multi-region delivery infrastructure",
+      "url": "https://www.contentful.com/developers/docs/infrastructure/mrdi"
+    },
+    {
+      "title": "Contentful · Enterprise",
+      "url": "https://www.contentful.com/enterprise"
+    },
+    {
+      "title": "Web Alert · Uptime SLA explained",
+      "url": "https://web-alert.io/blog/uptime-sla-explained"
+    }
   ]
 }
