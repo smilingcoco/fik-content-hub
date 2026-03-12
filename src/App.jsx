@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import HubHomePage from './pages/HubHomePage';
 import OriginsMapPage from './pages/OriginsMapPage';
 import BenchmarkCmssPage from './pages/BenchmarkCmssPage';
@@ -31,7 +32,17 @@ function getRoute() {
 }
 
 export default function App() {
-  const route = getRoute();
+  const [route, setRoute] = useState(getRoute());
+
+  useEffect(() => {
+    const onRouteChange = () => setRoute(getRoute());
+    window.addEventListener('hashchange', onRouteChange);
+    window.addEventListener('popstate', onRouteChange);
+    return () => {
+      window.removeEventListener('hashchange', onRouteChange);
+      window.removeEventListener('popstate', onRouteChange);
+    };
+  }, []);
 
   if (route === '/origins-map') {
     return <OriginsMapPage />;
