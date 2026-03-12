@@ -1,24 +1,4 @@
-@font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori-Regular.otf') format('opentype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PPNeueMontrealMono';
-  src: url('/fonts/PPNeueMontrealMono-Book.otf') format('opentype');
-  font-display: swap;
-}
-
-:root {
-  --neutral-00: #ffffff;
-  --neutral-100: #f5f5f5;
-  --neutral-200: #e5e5e5;
-  --neutral-300: #d4d4d4;
-  --neutral-600: #837f85;
-  --neutral-900: #362c2c;
-  --blue-500: #2c54ff;
-}
+@import './brand.css';
 
 * {
   box-sizing: border-box;
@@ -37,12 +17,14 @@ html {
 }
 
 body {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-body);
   color: var(--neutral-900);
   background: var(--neutral-00);
   font-size: 15px;
   line-height: 1.65;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -61,7 +43,7 @@ a {
 
 .hub-backlink {
   display: inline-block;
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 10px;
@@ -89,7 +71,7 @@ a {
 }
 
 .hub-kicker {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 10px;
@@ -98,7 +80,7 @@ a {
 }
 
 .hub-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: -0.01em;
   font-size: clamp(34px, 6vw, 58px);
@@ -130,7 +112,7 @@ a {
 }
 
 .hub-status {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 9px;
@@ -141,7 +123,7 @@ a {
 }
 
 .hub-card-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
   font-size: 28px;
   letter-spacing: -0.01em;
@@ -157,7 +139,7 @@ a {
 .hub-card-link {
   display: inline-block;
   margin-top: 14px;
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 10px;
@@ -177,7 +159,7 @@ a {
   left: 0;
   width: 100%;
   height: 3px;
-  background: rgba(44, 84, 255, 0.08);
+  background: rgba(250, 210, 70, 0.14);
   z-index: 120;
 }
 
@@ -214,7 +196,7 @@ a {
 
 .side-nav-label,
 .side-nav-link {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
 }
 
@@ -246,7 +228,7 @@ a {
   text-decoration: none;
   font-size: 14px;
   letter-spacing: 0.08em;
-  color: rgba(54, 44, 44, 0.85);
+  color: var(--neutral-600);
   transition: color 0.2s ease, transform 0.2s ease;
   padding: 1px 0;
 }
@@ -312,7 +294,7 @@ a {
 .propuestas-label,
 .footer-brand,
 .footer-info {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
 }
 
@@ -324,7 +306,7 @@ a {
 }
 
 .hero-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: clamp(52px, 11vw, 120px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -353,7 +335,7 @@ a {
 }
 
 .hero-action {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 10px;
@@ -387,7 +369,7 @@ a {
 .hero-scroll {
   font-size: 10px;
   letter-spacing: 0.12em;
-  color: var(--neutral-300);
+  color: var(--neutral-600);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -407,7 +389,7 @@ a {
 }
 
 .section-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 28px;
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -431,7 +413,7 @@ a {
 
 .author-comment-label,
 .author-signature {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -465,7 +447,7 @@ a {
   border: 1px solid var(--neutral-200);
   border-radius: 12px;
   padding: 10px 12px;
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -580,7 +562,7 @@ a {
 }
 
 .metric-value {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 36px;
   line-height: 1;
   margin-bottom: 6px;
@@ -635,7 +617,7 @@ a {
 }
 
 .timeline-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 15px;
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -674,7 +656,7 @@ a {
 
 .evolution-title,
 .signal-hunter-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 22px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -715,8 +697,8 @@ a {
 }
 
 .evolution-col.after {
-  background: #eef2ff;
-  border-color: #d7dfff;
+  background: rgba(250, 210, 70, 0.12);
+  border-color: rgba(250, 210, 70, 0.35);
 }
 
 .evolution-col-label {
@@ -727,7 +709,7 @@ a {
 }
 
 .evolution-col-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 15px;
   text-transform: uppercase;
   color: var(--neutral-900);
@@ -754,7 +736,7 @@ a {
   position: absolute;
   right: 0;
   top: 12px;
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 120px;
   line-height: 1;
   color: var(--neutral-100);
@@ -775,7 +757,7 @@ a {
 }
 
 .pattern-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -810,7 +792,7 @@ a {
 }
 
 .archetype-name {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 17px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -835,12 +817,12 @@ a {
 .partner-pipeline-label {
   font-size: 9px;
   letter-spacing: 0.1em;
-  color: var(--neutral-300);
+  color: var(--neutral-600);
   margin-bottom: 6px;
 }
 
 .archetype-champion-name {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 13px;
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -857,7 +839,7 @@ a {
 .archetype-examples {
   font-size: 10px;
   letter-spacing: 0.08em;
-  color: var(--neutral-300);
+  color: var(--neutral-600);
   margin-top: 12px;
 }
 
@@ -866,7 +848,7 @@ a {
 }
 
 .partner-name {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -1021,7 +1003,7 @@ a {
 
 .action-text strong {
   display: block;
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
   font-size: 15px;
   margin-bottom: 4px;
@@ -1053,7 +1035,7 @@ a {
 }
 
 .propuestas-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -1086,14 +1068,14 @@ a {
 }
 
 .criteria-name {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 18px;
   text-transform: uppercase;
   line-height: 1.1;
 }
 
 .criteria-weight {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 10px;
   color: var(--blue-500);
@@ -1130,7 +1112,7 @@ a {
 }
 
 .scan-summary-label {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -1184,7 +1166,7 @@ a {
 .model-card-label,
 .flow-step-num,
 .quick-decision-label {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 9px;
   letter-spacing: 0.1em;
@@ -1195,7 +1177,7 @@ a {
 .model-card-title,
 .decision-card-title,
 .flow-step-title {
-  font-family: 'PPMori', serif;
+  font-family: var(--font-display);
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -1242,7 +1224,7 @@ a {
 
 .quick-decision-complexity {
   margin-top: 10px;
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 9px;
   letter-spacing: 0.08em;
@@ -1259,7 +1241,7 @@ a {
 }
 
 .score-value {
-  font-family: 'PPNeueMontrealMono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.06em;
   color: var(--neutral-900);
@@ -1322,7 +1304,7 @@ a {
 }
 
 .footer-info {
-  color: var(--neutral-300);
+  color: var(--neutral-600);
 }
 
 @media (max-width: 900px) {
@@ -1579,13 +1561,13 @@ a {
     font-size: 13px;
     letter-spacing: 0;
     text-transform: none;
-    font-family: 'PPMori', serif;
+    font-family: var(--font-display);
   }
 
   .signal-table tbody td::before {
     content: attr(data-label);
     display: block;
-    font-family: 'PPNeueMontrealMono', monospace;
+    font-family: var(--font-mono);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-size: 9px;

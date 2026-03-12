@@ -1,242 +1,181 @@
 {
   "meta": {
-    "label": "Tailor Hub · Content Intelligence",
-    "title": "Benchmark CMS's",
-    "subtitle": "De WordPress a Contentful: cómo elegir el CMS que no te va a frenar",
+    "label": "FIK · Content Hub · Placeholder",
+    "title": "Benchmark CMS",
+    "subtitle": "Plantilla de benchmark para comparar plataformas de contenido",
     "stats": [
-      { "label": "CMS analizados", "value": "4" },
-      { "label": "Modelos comparados", "value": "2" },
-      { "label": "FAQs clave", "value": "6" },
-      { "label": "Fuentes", "value": "8" },
-      { "label": "Versión", "value": "1.2 · Mar 2026" }
+      { "label": "Plataformas", "value": "00" },
+      { "label": "Criterios", "value": "00" },
+      { "label": "FAQs", "value": "00" },
+      { "label": "Fuentes", "value": "00" },
+      { "label": "Versión", "value": "0.1 · Mar 2026" }
     ]
   },
   "quickTakeaways": [
-    "La decisión no es técnica solo: afecta autonomía editorial, velocidad y coste a 3 años.",
-    "Monolítico funciona bien en alcance corto; headless escala mejor en multicanal y multi-equipo.",
-    "Para contexto enterprise con gobernanza alta, Contentful suele ofrecer mejor equilibrio operativo."
+    "[Placeholder] Insight principal 01.",
+    "[Placeholder] Insight principal 02.",
+    "[Placeholder] Insight principal 03."
   ],
   "objective": [
-    "Hay más de 880 CMS en el mercado. La mayoría de los proyectos acaba usando uno de cuatro.",
-    "Este benchmark traduce esa realidad a una guía práctica para decidir con criterio, según el momento del negocio, la complejidad del contenido y la autonomía que necesita cada equipo.",
-    "No es una comparativa académica: es una herramienta de decisión para producto, marketing y tecnología."
+    "[Placeholder] Objetivo del benchmark y decisión que habilita.",
+    "[Placeholder] Público destinatario: producto, negocio, marketing, tecnología.",
+    "[Placeholder] Alcance de este documento."
   ],
   "modelShift": [
-    "Antes de comparar plataformas concretas, hay una distinción que divide el mercado: CMS monolítico vs CMS headless.",
-    "En un CMS monolítico, el contenido y su presentación viven acoplados en el mismo sistema. Funciona bien para una web concreta, pero cada nuevo canal suele implicar tocar la base completa.",
-    "En un CMS headless, el contenido se gestiona por API y se publica una vez para distribuirse en múltiples frontends: web, app, landing, portal o cualquier canal nuevo.",
-    "La consecuencia operativa es directa: marketing gana autonomía para publicar, IT conserva control estructural, y escalar canales deja de requerir rehacerlo todo."
+    "[Placeholder] Introducción al marco de comparación.",
+    "[Placeholder] Diferencia entre modelos operativos.",
+    "[Placeholder] Impacto práctico en equipos y costes.",
+    "[Placeholder] Criterio para elegir según contexto."
   ],
   "modelComparison": [
     {
-      "name": "CMS monolítico",
-      "fit": "Excelente para una web principal con cambios acotados",
+      "name": "Modelo A",
+      "fit": "[Placeholder] Encaje principal",
       "points": [
-        "Backend + frontend en el mismo sistema",
-        "Menos fricción inicial",
-        "Escalado multicanal más costoso"
+        "[Placeholder] Punto 01",
+        "[Placeholder] Punto 02",
+        "[Placeholder] Punto 03"
       ]
     },
     {
-      "name": "CMS headless",
-      "fit": "Excelente para web + app + canales múltiples",
+      "name": "Modelo B",
+      "fit": "[Placeholder] Encaje principal",
       "points": [
-        "Contenido distribuido por API",
-        "Más autonomía editorial a escala",
-        "Requiere diseño inicial de arquitectura"
+        "[Placeholder] Punto 01",
+        "[Placeholder] Punto 02",
+        "[Placeholder] Punto 03"
       ]
     }
   ],
   "platforms": [
     {
-      "name": "WordPress",
-      "kicker": "Democratización + velocidad de arranque",
-      "complexity": "Baja",
-      "paragraphs": [
-        "WordPress eliminó la barrera técnica para publicar en internet: plantillas, plugins y curva de entrada baja.",
-        "Sigue siendo una opción sólida para blogs, webs corporativas pequeñas y proyectos con alcance acotado.",
-        "El reto aparece al escalar: más idiomas, más canales, más dependencia de plugins y mayor riesgo de deuda técnica en mantenimiento."
-      ],
-      "whenYes": [
-        "Web corporativa o blog de alcance corto",
-        "Equipo pequeño con foco en velocidad"
-      ],
-      "whenNo": [
-        "Multicanal real (web + app + portal)",
-        "Gobernanza editorial avanzada por roles"
-      ],
-      "decision": "Si tu horizonte es corto y quieres salir rápido, WordPress sigue siendo una gran opción." 
-    },
-    {
-      "name": "Drupal",
-      "kicker": "Control alto + operación compleja",
-      "complexity": "Alta",
-      "paragraphs": [
-        "Drupal encaja en organizaciones con flujos editoriales exigentes y equipos técnicos consolidados.",
-        "Puede sostener arquitecturas avanzadas, pero exige disciplina operativa continua y ciclos de mantenimiento intensivos.",
-        "Cuando se configura como headless, gana flexibilidad de entrega, pero mantiene una base no diseñada originalmente para ese modelo."
-      ],
-      "whenYes": [
-        "Entorno institucional con requisitos muy específicos",
-        "Equipo técnico interno robusto y estable"
-      ],
-      "whenNo": [
-        "Necesidad alta de autonomía para marketing",
-        "Presupuesto anual limitado para mantenimiento"
-      ],
-      "decision": "Si ya existe una base madura en Drupal, la decisión clave es optimizar TCO y gobernanza." 
-    },
-    {
-      "name": "Sanity",
-      "kicker": "Headless nativo + control técnico extremo",
-      "complexity": "Media-alta",
-      "paragraphs": [
-        "Sanity aporta una experiencia excelente para equipos de desarrollo: modelo versionado con código, auditable y altamente flexible.",
-        "Es ideal cuando producto y contenido evolucionan rápido y el equipo técnico lidera esa evolución.",
-        "En entornos con fuerte autonomía editorial, algunos cambios de estructura siguen requiriendo soporte técnico, y eso afecta la operación diaria."
-      ],
-      "whenYes": [
-        "Producto digital iterativo con equipo técnico fuerte",
-        "Necesidad de modelado muy flexible"
-      ],
-      "whenNo": [
-        "Equipo editorial muy independiente del técnico",
-        "Presupuesto sensible a picos de consumo API"
-      ],
-      "decision": "Si prima la flexibilidad del modelo por encima de todo, Sanity suele rendir muy bien." 
-    },
-    {
-      "name": "Contentful",
-      "kicker": "API-first + gobernanza enterprise",
+      "name": "Plataforma 01",
+      "kicker": "[Placeholder] Posicionamiento",
       "complexity": "Media",
       "paragraphs": [
-        "Contentful nació headless desde origen y su fortaleza principal es operativa: gobernanza clara, permisos sólidos y escalado multi-equipo.",
-        "IT puede definir estructura y reglas; marketing puede operar con autonomía dentro de ese marco.",
-        "Su principal trade-off está en pricing y negociación enterprise, compensado por estabilidad contractual y previsibilidad en escenarios de escala."
+        "[Placeholder] Contexto general.",
+        "[Placeholder] Fortalezas reales.",
+        "[Placeholder] Límites o riesgos."
       ],
-      "whenYes": [
-        "Organización con varios equipos editoriales y mercados",
-        "Necesidad de control y trazabilidad con operación fluida"
+      "whenYes": ["[Placeholder] Cuándo sí 01", "[Placeholder] Cuándo sí 02"],
+      "whenNo": ["[Placeholder] Cuándo no 01", "[Placeholder] Cuándo no 02"],
+      "decision": "[Placeholder] Recomendación corta."
+    },
+    {
+      "name": "Plataforma 02",
+      "kicker": "[Placeholder] Posicionamiento",
+      "complexity": "Alta",
+      "paragraphs": [
+        "[Placeholder] Contexto general.",
+        "[Placeholder] Fortalezas reales.",
+        "[Placeholder] Límites o riesgos."
       ],
-      "whenNo": [
-        "Proyecto muy pequeño con ciclo corto",
-        "Contexto sin necesidad de gobernanza compleja"
+      "whenYes": ["[Placeholder] Cuándo sí 01", "[Placeholder] Cuándo sí 02"],
+      "whenNo": ["[Placeholder] Cuándo no 01", "[Placeholder] Cuándo no 02"],
+      "decision": "[Placeholder] Recomendación corta."
+    },
+    {
+      "name": "Plataforma 03",
+      "kicker": "[Placeholder] Posicionamiento",
+      "complexity": "Baja",
+      "paragraphs": [
+        "[Placeholder] Contexto general.",
+        "[Placeholder] Fortalezas reales.",
+        "[Placeholder] Límites o riesgos."
       ],
-      "decision": "Si buscas equilibrio entre control, autonomía y escalado real, Contentful es una apuesta sólida." 
+      "whenYes": ["[Placeholder] Cuándo sí 01", "[Placeholder] Cuándo sí 02"],
+      "whenNo": ["[Placeholder] Cuándo no 01", "[Placeholder] Cuándo no 02"],
+      "decision": "[Placeholder] Recomendación corta."
+    },
+    {
+      "name": "Plataforma 04",
+      "kicker": "[Placeholder] Posicionamiento",
+      "complexity": "Media",
+      "paragraphs": [
+        "[Placeholder] Contexto general.",
+        "[Placeholder] Fortalezas reales.",
+        "[Placeholder] Límites o riesgos."
+      ],
+      "whenYes": ["[Placeholder] Cuándo sí 01", "[Placeholder] Cuándo sí 02"],
+      "whenNo": ["[Placeholder] Cuándo no 01", "[Placeholder] Cuándo no 02"],
+      "decision": "[Placeholder] Recomendación corta."
     }
   ],
   "benchmark": [
     {
-      "cms": "Contentful",
-      "fit": "Enterprise multi-equipo y multi-mercado",
-      "score": "8.9/10",
-      "strength": "Governance, SLA y operación editorial",
-      "risk": "Coste de licencia y negociación"
+      "cms": "Plataforma 01",
+      "fit": "[Placeholder] Fit",
+      "score": "8.0/10",
+      "strength": "[Placeholder] Fortaleza",
+      "risk": "[Placeholder] Riesgo"
     },
     {
-      "cms": "Sanity",
-      "fit": "Producto digital con iteración rápida",
-      "score": "8.5/10",
-      "strength": "Flexibilidad de modelado y DX",
-      "risk": "Dependencia técnica en cambios editoriales"
+      "cms": "Plataforma 02",
+      "fit": "[Placeholder] Fit",
+      "score": "7.5/10",
+      "strength": "[Placeholder] Fortaleza",
+      "risk": "[Placeholder] Riesgo"
     },
     {
-      "cms": "Drupal",
-      "fit": "Ecosistemas institucionales complejos",
-      "score": "7.4/10",
-      "strength": "Control estructural avanzado",
-      "risk": "Carga de mantenimiento elevada"
+      "cms": "Plataforma 03",
+      "fit": "[Placeholder] Fit",
+      "score": "7.0/10",
+      "strength": "[Placeholder] Fortaleza",
+      "risk": "[Placeholder] Riesgo"
     },
     {
-      "cms": "WordPress",
-      "fit": "Web corporativa simple / blog",
-      "score": "7.1/10",
-      "strength": "Adopción rápida y bajo coste inicial",
-      "risk": "Escalabilidad y deuda por plugins"
+      "cms": "Plataforma 04",
+      "fit": "[Placeholder] Fit",
+      "score": "6.8/10",
+      "strength": "[Placeholder] Fortaleza",
+      "risk": "[Placeholder] Riesgo"
     }
   ],
   "decisionFlow": [
     {
-      "title": "Definir contexto de negocio",
-      "body": "Volumen de contenidos, idiomas, canales y nivel de autonomía editorial que se espera en 12-24 meses."
+      "title": "Definir contexto",
+      "body": "[Placeholder]"
     },
     {
-      "title": "Elegir modelo operativo",
-      "body": "Monolítico para foco corto; headless para escala multicanal y equipos distribuidos."
+      "title": "Elegir modelo",
+      "body": "[Placeholder]"
     },
     {
-      "title": "Evaluar trade-offs reales",
-      "body": "Time-to-market, gobernanza, mantenimiento y coste total en 3 años."
+      "title": "Evaluar trade-offs",
+      "body": "[Placeholder]"
     },
     {
-      "title": "Tomar decisión y ejecutar",
-      "body": "Alinear tecnología, marketing y operaciones desde el inicio para evitar deuda futura."
+      "title": "Decidir y ejecutar",
+      "body": "[Placeholder]"
     }
   ],
   "faq": [
     {
-      "question": "¿Por qué no WordPress?",
-      "answer": "Para proyectos simples, WordPress encaja. Cuando aparecen múltiples idiomas, múltiples canales y requisitos altos de disponibilidad, suele quedarse corto por diseño de base."
+      "question": "[Placeholder] Pregunta frecuente 01",
+      "answer": "[Placeholder] Respuesta."
     },
     {
-      "question": "¿Por qué no Drupal si ya lo tenemos?",
-      "answer": "Drupal funciona, pero conviene medir cuánto presupuesto anual se dedica a mantener la plataforma frente a cuánto se invierte en crecimiento de producto."
+      "question": "[Placeholder] Pregunta frecuente 02",
+      "answer": "[Placeholder] Respuesta."
     },
     {
-      "question": "¿Por qué Contentful y no Sanity o Storyblok?",
-      "answer": "Porque el foco aquí es gobernanza + autonomía editorial en organizaciones complejas. Si un caso concreto encaja mejor con otra plataforma, se recomienda sin problema."
-    },
-    {
-      "question": "¿Es caro Contentful?",
-      "answer": "La licencia puede parecer alta. En proyectos de escala, el coste total a 3 años suele mejorar cuando hay menos fricción operativa y más previsibilidad contractual."
-    },
-    {
-      "question": "¿Cuánto cuesta migrar?",
-      "answer": "Depende del punto de partida, pero también hay que medir el coste de no migrar: mantener durante años una arquitectura que frena velocidad y autonomía."
-    },
-    {
-      "question": "¿Tailor implementa este tipo de proyectos?",
-      "answer": "Sí. Tailor Hub implementa plataformas de contenido de esta escala y acompaña tanto en arquitectura como en operación y decisiones de largo plazo."
+      "question": "[Placeholder] Pregunta frecuente 03",
+      "answer": "[Placeholder] Respuesta."
     }
   ],
   "about": [
-    "En Tailor Hub llevamos años implementando proyectos de contenido a escala y esa experiencia nos ha dado criterio práctico sobre qué funciona en operación real.",
-    "Nos especializamos en Contentful por ajuste con proyectos enterprise: equipos editoriales amplios, gobernanza exigente y necesidad de escalar sin rehacer arquitectura.",
-    "Cuando otra plataforma es mejor para un caso concreto, se recomienda con transparencia y se conecta al cliente con el partner adecuado.",
-    "Si estás en fase de decisión sobre tu stack de contenido, escríbenos a hola@tailorhub.com para una conversación de trabajo sin ruido comercial."
+    "[Placeholder] Quiénes sois y por qué publicáis este benchmark.",
+    "[Placeholder] Qué tipo de proyectos acompañáis.",
+    "[Placeholder] Cómo contactar para profundizar."
   ],
   "sources": [
     {
-      "title": "W3Techs · Usage statistics of content management systems",
-      "url": "https://w3techs.com/technologies/overview/content_management"
+      "title": "[Placeholder] Fuente 01",
+      "url": "https://example.com/source-01"
     },
     {
-      "title": "BuiltWith · CMS market share report",
-      "url": "https://builtwith.com/cms"
-    },
-    {
-      "title": "Storyblok · State of CMS",
-      "url": "https://www.storyblok.com/state-of-cms"
-    },
-    {
-      "title": "Vention · Software maintenance costs benchmark",
-      "url": "https://ventionteams.com/enterprise/software-maintenance-costs"
-    },
-    {
-      "title": "Contentful · Service Level Agreement",
-      "url": "https://www.contentful.com/legal/service-level-agreement"
-    },
-    {
-      "title": "Contentful · Multi-region delivery infrastructure",
-      "url": "https://www.contentful.com/developers/docs/infrastructure/mrdi"
-    },
-    {
-      "title": "Contentful · Enterprise",
-      "url": "https://www.contentful.com/enterprise"
-    },
-    {
-      "title": "Web Alert · Uptime SLA explained",
-      "url": "https://web-alert.io/blog/uptime-sla-explained"
+      "title": "[Placeholder] Fuente 02",
+      "url": "https://example.com/source-02"
     }
   ]
 }

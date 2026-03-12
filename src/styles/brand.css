@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Fellix';
+  src: url('/fonts/Fellix-Regular.woff2') format('woff2'),
+    url('/fonts/Fellix-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Typography */
+  --font-display: 'Fellix', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-body: 'Fellix', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-mono: 'Fellix', 'SFMono-Regular', Menlo, monospace;
+
+  /* FIK official palette */
+  --fik-black: #141419; /* R20 G20 B25 */
+  --fik-gray: #f0f0e6; /* R240 G240 B230 */
+  --fik-green: #148246; /* R20 G130 B70 */
+  --fik-blue: #1e50f0; /* R30 G80 B240 */
+  --fik-pink: #f0a0d2; /* R240 G160 B210 */
+  --fik-yellow: #fad246; /* R250 G210 B70 */
+
+  /* Theme tokens */
+  --neutral-00: var(--fik-black);
+  --neutral-100: #1c1c22;
+  --neutral-200: #2d2d35;
+  --neutral-300: #454550;
+  --neutral-600: rgba(255, 255, 255, 0.78);
+  --neutral-900: #f8f8f4;
+
+  /* Primary accent (legibility mode) */
+  --blue-500: var(--fik-yellow);
+}

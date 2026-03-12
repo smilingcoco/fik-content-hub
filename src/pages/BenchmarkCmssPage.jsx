@@ -29,7 +29,7 @@ export default function BenchmarkCmssPage() {
   const [wordpress, drupal, sanity, contentful] = data.platforms;
 
   useEffect(() => {
-    document.title = "Benchmark CMS's - Tailor Hub";
+    document.title = "Benchmark CMS's - FIK Content Hub";
   }, []);
 
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function BenchmarkCmssPage() {
 
         <aside className="side-nav" aria-label="Navegación por secciones">
           <div className="side-nav-brand" aria-hidden="true">
-            <img src="/isotipo-tailor-black.png" alt="" />
+            <img src="/fik.svg" alt="" />
           </div>
           <ul className="side-nav-list">
             {navSections.map((item) => (

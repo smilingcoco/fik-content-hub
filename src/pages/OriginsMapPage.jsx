@@ -66,7 +66,7 @@ export default function OriginsMapPage() {
   }, []);
 
   useEffect(() => {
-    document.title = 'Origins Map v4 - Tailor Hub';
+    document.title = 'Origins Map v4 - FIK Content Hub';
   }, []);
 
   return (
@@ -81,7 +81,7 @@ export default function OriginsMapPage() {
         <HeroSection meta={data.meta} />
         <aside className="side-nav" aria-label="Navegación por secciones">
           <div className="side-nav-brand" aria-hidden="true">
-            <img src="/isotipo-tailor-black.png" alt="" />
+            <img src="/fik.svg" alt="" />
           </div>
           <ul className="side-nav-list">
             {navSections.map((item) => (

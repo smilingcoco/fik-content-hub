@@ -2,22 +2,20 @@ import { useEffect } from 'react';
 
 const contentItems = [
   {
-    title: 'Origins Map',
-    description:
-      'ICP fase 0: arquetipos, patrones y decisiones accionables construidas sobre historial real de proyectos.',
+    title: 'Documento Placeholder 01',
+    description: 'Resumen placeholder del contenido 01. Sustituir por título y descripción reales.',
     href: '/origins-map',
-    status: 'Publicado'
+    status: 'Borrador'
   },
   {
-    title: "Benchmark CMS's",
-    description:
-      'Comparativa operativa de CMS para decidir stack por contexto de negocio, complejidad y velocidad de ejecución.',
+    title: 'Documento Placeholder 02',
+    description: 'Resumen placeholder del contenido 02. Sustituir por título y descripción reales.',
     href: '/benchmark-cmss',
-    status: 'Publicado'
+    status: 'Borrador'
   },
   {
-    title: 'Signal Hunter Reports',
-    description: 'Próximamente: panel editorial de señales, hipótesis y activaciones semanales.',
+    title: 'Documento Placeholder 03',
+    description: 'Reservado para próximo contenido del hub.',
     href: null,
     status: 'Próximamente'
   }
@@ -25,17 +23,17 @@ const contentItems = [
 
 export default function HubHomePage() {
   useEffect(() => {
-    document.title = 'Tailor Content Hub';
+    document.title = 'FIK Content Hub';
   }, []);
 
   return (
     <main className="hub-shell">
       <header className="hub-header">
-        <img className="hub-logo" src="/isotipo-tailor-black.png" alt="Tailor Hub" />
-        <p className="hub-kicker">Tailor Hub · Content Hub</p>
+        <img className="hub-logo" src="/fik.svg" alt="FIK Content Hub" />
+        <p className="hub-kicker">FIK · Content Hub</p>
         <h1 className="hub-title">Contenidos Estratégicos</h1>
         <p className="hub-subtitle">
-          Un único punto de acceso para los documentos vivos de Tailor. Diseñado para crecer con nuevos assets.
+          Plantilla de hub para centralizar contenidos estratégicos. Sustituye estos textos por copy definitivo.
         </p>
       </header>
 
