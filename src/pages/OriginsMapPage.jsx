@@ -17,6 +17,7 @@ import SignalTable from '../components/SignalTable';
 import ActionList from '../components/ActionList';
 import PropuestasBox from '../components/PropuestasBox';
 import Footer from '../components/Footer';
+import withBase from '../utils/withBase';
 
 export default function OriginsMapPage() {
   const [metricsActive, setMetricsActive] = useState(false);
@@ -74,14 +75,14 @@ export default function OriginsMapPage() {
       <div className="reading-progress" aria-hidden="true">
         <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
       </div>
-      <a className="hub-backlink" href="/">
+      <a className="hub-backlink" href="#/">
         ← Volver al hub
       </a>
       <div className="app-layout">
         <HeroSection meta={data.meta} />
         <aside className="side-nav" aria-label="Navegación por secciones">
           <div className="side-nav-brand" aria-hidden="true">
-            <img src="/fik.svg" alt="" />
+            <img src={withBase('/fik.svg')} alt="" />
           </div>
           <ul className="side-nav-list">
             {navSections.map((item) => (

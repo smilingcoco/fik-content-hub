@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
+import withBase from '../utils/withBase';
 
 const contentItems = [
   {
     title: 'Documento Placeholder 01',
     description: 'Resumen placeholder del contenido 01. Sustituir por título y descripción reales.',
-    href: '/origins-map',
+    href: '#/origins-map',
     status: 'Borrador'
   },
   {
     title: 'Documento Placeholder 02',
     description: 'Resumen placeholder del contenido 02. Sustituir por título y descripción reales.',
-    href: '/benchmark-cmss',
+    href: '#/benchmark-cmss',
     status: 'Borrador'
   },
   {
@@ -29,7 +30,7 @@ export default function HubHomePage() {
   return (
     <main className="hub-shell">
       <header className="hub-header">
-        <img className="hub-logo" src="/fik.svg" alt="FIK Content Hub" />
+        <img className="hub-logo" src={withBase('/fik.svg')} alt="FIK Content Hub" />
         <p className="hub-kicker">FIK · Content Hub</p>
         <h1 className="hub-title">Contenidos Estratégicos</h1>
         <p className="hub-subtitle">

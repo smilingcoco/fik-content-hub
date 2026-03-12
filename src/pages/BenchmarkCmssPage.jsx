@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import data from '../data/benchmark-cmss.json';
 import HeroSection from '../components/HeroSection';
 import SectionWrapper from '../components/SectionWrapper';
+import withBase from '../utils/withBase';
 
 function scoreToPercent(score) {
   const value = Number(score.split('/')[0]);
@@ -103,7 +104,7 @@ export default function BenchmarkCmssPage() {
       <div className="reading-progress" aria-hidden="true">
         <div className="reading-progress-bar" style={{ width: `${readingProgress}%` }} />
       </div>
-      <a className="hub-backlink" href="/">
+      <a className="hub-backlink" href="#/">
         ← Volver al hub
       </a>
 
@@ -118,7 +119,7 @@ export default function BenchmarkCmssPage() {
 
         <aside className="side-nav" aria-label="Navegación por secciones">
           <div className="side-nav-brand" aria-hidden="true">
-            <img src="/fik.svg" alt="" />
+            <img src={withBase('/fik.svg')} alt="" />
           </div>
           <ul className="side-nav-list">
             {navSections.map((item) => (
