@@ -62,6 +62,14 @@ export default function BenchmarkCmssPage() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveSection(sectionId);
+    }
+  };
+
   const renderPlatform = (platform) => (
     <>
       <p className="section-note benchmark-kicker">{platform.kicker}</p>
@@ -124,13 +132,14 @@ export default function BenchmarkCmssPage() {
           <ul className="side-nav-list">
             {navSections.map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
+                <button
+                  type="button"
                   className={activeSection === item.id ? 'side-nav-link active' : 'side-nav-link'}
                   aria-current={activeSection === item.id ? 'true' : undefined}
+                  onClick={() => scrollToSection(item.id)}
                 >
                   <span>{item.number}.</span> {item.title}
-                </a>
+                </button>
               </li>
             ))}
           </ul>

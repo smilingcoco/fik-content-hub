@@ -15,6 +15,33 @@ export default function HeroSection({ meta, actions }) {
 
   const primaryAction = actions?.primary ?? { href: '#section-01', label: 'Empezar lectura' };
   const secondaryAction = actions?.secondary ?? { href: '#section-06', label: 'Ir a patrones' };
+  const scrollToSection = (href) => {
+    if (!href?.startsWith('#section-')) return;
+    const target = document.getElementById(href.slice(1));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const renderAction = (action, className) => {
+    if (action.href?.startsWith('#section-')) {
+      return (
+        <button
+          type="button"
+          className={`${className} hero-action-btn`}
+          onClick={() => scrollToSection(action.href)}
+        >
+          {action.label}
+        </button>
+      );
+    }
+
+    return (
+      <a className={className} href={action.href}>
+        {action.label}
+      </a>
+    );
+  };
 
   return (
     <header className="hero-section">
@@ -29,12 +56,8 @@ export default function HeroSection({ meta, actions }) {
       </h1>
       <p className="hero-subtitle">{meta.subtitle}</p>
       <div className="hero-actions">
-        <a className="hero-action primary" href={primaryAction.href}>
-          {primaryAction.label}
-        </a>
-        <a className="hero-action" href={secondaryAction.href}>
-          {secondaryAction.label}
-        </a>
+        {renderAction(primaryAction, 'hero-action primary')}
+        {renderAction(secondaryAction, 'hero-action')}
       </div>
       <div className="hero-meta-row">
         {meta.stats.map((item) => (

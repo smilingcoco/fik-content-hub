@@ -225,6 +225,11 @@ a {
 
 .side-nav-link {
   display: inline-block;
+  background: none;
+  border: 0;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
   text-decoration: none;
   font-size: 14px;
   letter-spacing: 0.08em;
@@ -343,6 +348,11 @@ a {
   color: var(--neutral-900);
   border: 1px solid var(--neutral-200);
   padding: 8px 12px;
+}
+
+.hero-action-btn {
+  cursor: pointer;
+  background: transparent;
 }
 
 .hero-action.primary {

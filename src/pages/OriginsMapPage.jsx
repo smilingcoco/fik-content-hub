@@ -70,6 +70,14 @@ export default function OriginsMapPage() {
     document.title = 'Origins Map v4 - FIK Content Hub';
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveSection(sectionId);
+    }
+  };
+
   return (
     <main className="page-shell">
       <div className="reading-progress" aria-hidden="true">
@@ -87,13 +95,14 @@ export default function OriginsMapPage() {
           <ul className="side-nav-list">
             {navSections.map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
+                <button
+                  type="button"
                   className={activeSection === item.id ? 'side-nav-link active' : 'side-nav-link'}
                   aria-current={activeSection === item.id ? 'true' : undefined}
+                  onClick={() => scrollToSection(item.id)}
                 >
                   <span>{item.number}.</span> {item.title}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
